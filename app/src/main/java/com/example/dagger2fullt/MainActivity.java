@@ -10,7 +10,13 @@ import com.example.dagger2fullt.model.Battery;
 import com.example.dagger2fullt.model.Mobile;
 import com.example.dagger2fullt.model.Proccessor;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
+
+    @Inject
+    public Mobile mobile;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         MobileComponent component= DaggerMobileComponent.create();
-        Mobile mobile=component.getMobile();
+//        Mobile mobile=component.getMobile();
+        component.inject(this);
         mobile.run();
 
     }
