@@ -18,23 +18,22 @@ public class Mobile {
 
 
 
-    @Inject //2nd field injection
-    public Battery battery;
+    //2nd field injection
+    private Battery battery;
 
     private Proccessor proccessor;
 
     @Inject  //1st constract injection
-    public Mobile(Proccessor proccessor) {
+    public Mobile(Battery battery,Proccessor proccessor) {
+        this.battery = battery;
         this.proccessor = proccessor;
         Log.i("MyMobile","Mobile");
     }
 
     public void run(){
-        Log.i("MyMobile","Run");
+        proccessor.start();
+        Log.i("MyMobile","Mobile Run");
     }
 
-    @Inject  //3rd method injection
-    public void connectCharger(Charger charger){
-        charger.setCharger(this);
-    }
+
 }
