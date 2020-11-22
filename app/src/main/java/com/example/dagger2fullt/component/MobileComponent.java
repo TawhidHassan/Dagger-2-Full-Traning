@@ -9,7 +9,7 @@ import com.example.dagger2fullt.modules.SanapDragonModule;
 import dagger.Component;
 import dagger.Provides;
 
-@Component(modules = {BatteryModule.class, MediaTekModule.class})
+@Component(modules = {BatteryModule.class, SanapDragonModule.class})
 public interface MobileComponent {
 
     Mobile getMobile();
