@@ -31,10 +31,14 @@ public class MainActivity extends AppCompatActivity {
 //        Mobile mobile=new Mobile(battery,proccessor);
 
 
-        MobileComponent component= DaggerMobileComponent.builder()
-                .setClockSpeed(3)
-                .setCore(2)
-                .build();
+//        MobileComponent component= DaggerMobileComponent.builder()
+//                .setClockSpeed(3)
+//                .setCore(2)
+//                .build();
+
+        MobileComponent component= DaggerMobileComponent.factory().create(3,2,24);
+
+
 //        Mobile mobile=component.getMobile();
         component.inject(this);
         mobile.run();

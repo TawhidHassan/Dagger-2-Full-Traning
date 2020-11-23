@@ -20,13 +20,14 @@ public class Mobile {
 
     //2nd field injection
     private Battery battery;
-
+    private  Camera camera;
     private Proccessor proccessor;
 
     @Inject  //1st constract injection
-    public Mobile(Battery battery,Proccessor proccessor) {
+    public Mobile(Battery battery,Proccessor proccessor,Camera camera) {
         this.battery = battery;
         this.proccessor = proccessor;
+        this.camera=camera;
         Log.i("MyMobile","Mobile");
     }
 
