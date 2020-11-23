@@ -16,7 +16,14 @@ public class SanapDragonModule {
     }
 
     @Provides
-    Proccessor getProccessor(){
-        return new SnapDragon(clockSpeed);
+    int getClockSpped(){
+        return clockSpeed;
     }
+
+    @Provides
+    Proccessor getProccessor(SnapDragon snapDragon){
+        return snapDragon;
+    }
+
+
 }

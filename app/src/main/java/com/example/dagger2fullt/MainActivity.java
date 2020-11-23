@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         MobileComponent component= DaggerMobileComponent.builder()
-                .sanapDragonModule(new SanapDragonModule(3))
+                .setClockSpeed(3)
+                .setCore(2)
                 .build();
 //        Mobile mobile=component.getMobile();
         component.inject(this);

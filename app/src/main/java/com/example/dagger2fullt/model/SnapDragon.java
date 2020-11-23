@@ -10,6 +10,7 @@ public class SnapDragon implements Proccessor{
     int clockSpeed;
 
 
+    @Inject
     public SnapDragon(int clockSpeed) {
         this.clockSpeed=clockSpeed;
         Log.i("MyMobile","Snapdragon");
