@@ -17,7 +17,7 @@ import javax.inject.Inject;
 public class MainActivity extends AppCompatActivity {
 
     @Inject
-    public Mobile mobile;
+    public Mobile mobile1,mobile2;
 
 
     @Override
@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        Mobile mobile=component.getMobile();
         component.inject(this);
-        mobile.run();
+        mobile1.run();
+        mobile2.run();
 
     }
 }

@@ -8,11 +8,13 @@ import com.example.dagger2fullt.modules.MediaTekModule;
 import com.example.dagger2fullt.modules.SanapDragonModule;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 import dagger.Provides;
 
+@Singleton
 @Component(modules = {BatteryModule.class, MediaTekModule.class, CameraModule.class})
 public interface MobileComponent {
 

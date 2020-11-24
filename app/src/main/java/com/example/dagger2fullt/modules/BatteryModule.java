@@ -4,6 +4,8 @@ import com.example.dagger2fullt.model.Battery;
 import com.example.dagger2fullt.model.Cobalt;
 import com.example.dagger2fullt.model.Lithium;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -22,6 +24,7 @@ public class BatteryModule {
         return  lithium;
     }
 
+    @Singleton
     @Provides
    static Battery getBattery(Lithium lithium,Cobalt cobalt){
         return new Battery(cobalt,lithium);
